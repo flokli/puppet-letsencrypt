@@ -1,0 +1,7 @@
+/modules
+/.bundle
+/vendor
+/Gemfile.lock
+*.swp
+*.swo
+*~
