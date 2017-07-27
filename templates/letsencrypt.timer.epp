@@ -1,0 +1,11 @@
+<%- | String $interval | -%>
+[Unit]
+Description=Renew letsencrypt certificates in <%= $interval %> intervals
+
+[Timer]
+OnCalendar=<%= $interval %>
+Persistent=true
+Unit=letsencrypt.service
+
+[Install]
+WantedBy=basic.target

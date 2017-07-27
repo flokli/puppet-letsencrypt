@@ -1,0 +1,8 @@
+<%- | String $package_name | -%>
+[Unit]
+Description=Renews letsencrypt certificates through <%= $package_name %>
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/<%= $package_name %> renew
