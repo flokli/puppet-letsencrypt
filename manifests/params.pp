@@ -2,6 +2,7 @@ class letsencrypt::params {
   case $::osfamily {
     'archlinux': {
       $webroot = '/srv/http'
+      $package_name = 'certbot'
     }
     'debian': {
       $webroot = '/var/www/html'
